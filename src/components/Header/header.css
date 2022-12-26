@@ -1,0 +1,27 @@
+/* Desktop */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+.row-header{
+    margin : 40px 100px 0px 100px;
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+    height : 68px;
+}
+
+.w-nav {
+    display: flex;
+    list-style-type:none
+}
+
+.nav-btn {
+    text-decoration : none;
+    margin-left : 60px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.nav-btn:hover {
+    text-decoration : underline;
+}

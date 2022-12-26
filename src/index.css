@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+
+.primary {
+    color : #FF6060;
+}
+
+.primary-background {
+    background-color: #FF6060;
+}
+
+.secondary {
+    background-color: #F6F6F6;
+}
+
+.secondary-background {
+    background-color: #F6F6F6;
+}

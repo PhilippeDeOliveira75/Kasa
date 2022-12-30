@@ -1,13 +1,42 @@
 import Header from '../components/Header/header';
 import Footer from '../components/Footer/footer';
+import imageDesktop from '../assets/AboutDesktopBanner.webp';
+import imageMobile from '../assets/AboutMobileBanner.webp';
+import '../index.css';
+import aboutInfos from '../about.json';
+import Collapse from '../components/Collapse/collapse';
+
 
 function About() {
+
+	document.title = "A propos";
+    
+    const widthScreen = window.innerWidth;
+
+    /*let imgBanner;
+  
+    if(widthScreen > 767){
+      imgBanner = imageMobile;
+    } else {
+      imgBanner = imageDesktop;
+    }*/
+
 	return (
 		<div>
 			<Header />
-			<h1>About</h1>
-			<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</div>
+			<div className='row-home-banner'>
+            	<img src={imageDesktop} alt='Paysage_montagneux' className='img-about-banner' />
+        	</div>
+
+			<div className='aboutCollapse'>
+                {aboutInfos.map((infos, index) => (
+                    <Collapse
+                        key={`${infos.title}-${index}`}
+                        title={infos.title}
+                        texte={infos.texte}
+                    />
+                ))}
+            </div>
 			<Footer />
 		</div>
 	);

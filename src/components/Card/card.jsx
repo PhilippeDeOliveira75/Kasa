@@ -3,17 +3,16 @@ import '../../index.css';
 import { NavLink } from "react-router-dom";
 
 
-function Card({ title, cover, id }) {
+function Card({id, title, cover}) {
     return (
-        <div className='row-cards secondary-background'>
-            <div className='w-cards'>
-                <NavLink to={'/rental/' + id} className='card' data-id={id}>
-                    <img className='card-img' src={cover} alt={`${title} cover`}></img>
-                    <h2 className='card-title'>{title}</h2>
-                </NavLink>
+        <NavLink to={'/rental/' + id} className='card' data-id={id}>
+            <div>
+                <img className='card-img' src={cover} alt={`${title} cover`}></img>
             </div>
-        </div>
-    
+            <div className='w-card-title'>
+                <h2 className='card-title'>{title}</h2>
+            </div>
+        </NavLink>
     )
 }
 

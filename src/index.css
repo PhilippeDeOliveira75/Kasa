@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
 .primary {
     color : #FF6060;
 }
@@ -15,4 +28,18 @@
 
 .secondary-background {
     background-color: #F6F6F6;
+}
+
+.row-about-banner{
+    display : flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items: center;
+    margin : 40px 100px 0px 100px;
+}
+
+.img-about-banner{
+    width: 100%;
+    border-radius : 10px;
+    filter: brightness(70%);
 }

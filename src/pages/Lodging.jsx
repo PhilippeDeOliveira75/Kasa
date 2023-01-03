@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react"
+import { useParams, useNavigate } from "react-router-dom";
 import Header from '../components/Header/header';
+import Gallery from '../components/Gallery/gallery';
+import RentalInfo from '../components/RentalInfo/rentalinfo';
 import Footer from '../components/Footer/footer';
 import '../index.css';
 
 function Lodging() {
 
-	const [lodgings, setLodgings] = useState([]);
+	const { id } = useParams();
+	const navigate = useNavigate();
+	const [lodging, setLodging] = useState({});
 
 	useEffect(() => {
 		fetch("http://localhost:3000/logements.json")
@@ -15,8 +20,12 @@ function Lodging() {
 			}
 		})
 		.then(function(res){
-			console.log(res);
-			setLodgings(res);
+			const lodging = res.find((item) => item.id === id);
+			if(lodging === undefined) {
+				return navigate("/404")
+			} else {
+				setLodging(lodging)
+			}
 		})
 		.catch(function(err){
 			console.log(err)
@@ -27,35 +36,18 @@ function Lodging() {
 		<div>
 			<Header />
 			<div>
-				<img></img>
+			{ lodging && lodging.length > 0 && lodging.map((item) =>
+			<Gallery 
+				pictures={item.pictures}
+			/>
+			)}
 			</div>
-			<div className="row-title-host">
-				<div className="w-title">
-					<h1></h1>
-					<p></p>
-				</div>
-				<div className="w-host">
-					<p></p>
-					<img></img>
-				</div>
-			</div>
-			<div className="row-tags-rating">
-				<div className="w-tags">
-					<p></p>
-				</div>
-				<div className="w-rating">
-					<i></i>
-					<i></i>
-					<i></i>
-					<i></i>
-					<i></i>
-				</div>
-			</div>
-			<div className="row-description-facilities">
-				<div className="w-description">
-				</div>
-				<div className="w-facilities">
-				</div>
+			<div>
+			{ lodging && lodging.length > 0 && lodging.map((item) =>
+			<RentalInfo 
+				title={item.title}
+			/>
+			)}
 			</div>
 			<Footer />
 		</div>

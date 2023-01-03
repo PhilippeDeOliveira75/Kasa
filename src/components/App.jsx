@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Lodging from "../pages/Lodging";

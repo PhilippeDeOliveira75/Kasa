@@ -10,7 +10,7 @@ function Lodging() {
 
 	const { id } = useParams();
 	const navigate = useNavigate();
-	const [lodging, setLodging] = useState({});
+	const [lodging, setLodging] = useState(null);
 
 	useEffect(() => {
 		fetch("http://localhost:3000/logements.json")
@@ -20,11 +20,11 @@ function Lodging() {
 			}
 		})
 		.then(function(res){
-			const lodging = res.find((item) => item.id === id);
-			if(lodging === undefined) {
+			const found = res.find((item) => item.id === id);
+			if(found === undefined) {
 				return navigate("/404")
 			} else {
-				setLodging(lodging)
+				setLodging(found)
 			}
 		})
 		.catch(function(err){
@@ -32,23 +32,28 @@ function Lodging() {
 		})
 	}, []);
 
+	console.log(lodging);
+	if(lodging) {
+		console.log(lodging.title);
+	}
+
 	return (
 		<div>
 			<Header />
-			<div>
-			{ lodging && lodging.length > 0 && lodging.map((item) =>
-			<Gallery 
-				pictures={item.pictures}
-			/>
+			{lodging && (
+				<div>
+					<Gallery
+						pictures={lodging.pictures}
+					/>
+					<RentalInfo
+						title={lodging.title}
+						location={lodging.location}
+						hostname={lodging.host.name}
+						hostpicture={lodging.host.picture}
+						tags={lodging.tags}
+					/>
+				</div>
 			)}
-			</div>
-			<div>
-			{ lodging && lodging.length > 0 && lodging.map((item) =>
-			<RentalInfo 
-				title={item.title}
-			/>
-			)}
-			</div>
 			<Footer />
 		</div>
 	);

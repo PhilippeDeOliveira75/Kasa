@@ -1,25 +1,33 @@
 import Header from '../components/Header/header';
 import Footer from '../components/Footer/footer';
 import imageDesktop from '../assets/AboutDesktopBanner.webp';
-import imageMobile from '../assets/AboutMobileBanner.webp';
 import '../index.css';
-import aboutInfos from '../about.json';
+
 import Collapse from '../components/Collapse/collapse';
+import React, { useState, useEffect } from "react";
 
 
 function About() {
 
-	document.title = "A propos";
-    
-    const widthScreen = window.innerWidth;
+  const [aboutInfos, setAboutInfos] = useState([])
 
-    /*let imgBanner;
-  
-    if(widthScreen > 767){
-      imgBanner = imageMobile;
-    } else {
-      imgBanner = imageDesktop;
-    }*/
+  useEffect(() => {
+		fetch("http://localhost:3000/about.json")
+		.then(function(res){
+			if(res.ok){
+				return res.json();
+			}
+		})
+		.then(function(res){
+			console.log(res);
+			setAboutInfos(res);
+		})
+		.catch(function(err){
+			console.log(err)
+		})
+	}, []);
+
+	document.title = "A propos";
 
 	return (
 		<div>

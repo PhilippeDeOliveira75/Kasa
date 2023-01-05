@@ -16,9 +16,9 @@ function Collapse({ title, texte }){
 
     return(
         <div className='collapseDivBox'>
-            <div className='collapseDivTitle primary-background'>
+            <div className='collapseDivTitle primary-background' onClick={toggle}>
                 <h1 className='collapseTitle'>{title}</h1>
-                <p className='buttonUpDown' onClick={toggle}>
+                <p className='buttonUpDown'>
                     {!open ? <img src={chevronDown} alt="Chevron down" /> : <img src={chevronUp} alt="Chevron up" /> }
                 </p>
             </div>

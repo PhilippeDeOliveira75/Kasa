@@ -7,7 +7,9 @@ function Header() {
 	return (
 		<header>
 			<div className='row-header'>
-				<img src={logo} alt='logo_kasa' className='logo-kasa' />
+				<NavLink to="/">
+					<img src={logo} alt='logo_kasa' className='logo-kasa' />
+				</NavLink>
 				<nav>
 					<ul className='w-nav'>
 						<li>

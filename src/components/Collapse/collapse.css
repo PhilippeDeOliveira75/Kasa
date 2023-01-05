@@ -11,13 +11,14 @@
     height: 50px;
 }
 
-.collapseTitle{
-    color: white;
-    font-size: 34px;
+.collapseDivTitle:hover{
+    cursor: pointer;
 }
 
-.buttonUpDown:hover{
-    cursor: pointer;
+.collapseTitle{
+    color: white;
+    font-family: Montserrat;
+    font-size: 34px;
 }
 
 .content-parent {
@@ -31,6 +32,7 @@
 .toggleParagraph{
     margin: 30px 20px 20px 20px;
     font-size: 24px;
+    font-family: Montserrat;
 }
 
 .content {

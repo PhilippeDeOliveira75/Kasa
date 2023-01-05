@@ -1,0 +1,61 @@
+.row-rentalinfo{
+    margin: 30px 100px;
+}
+
+.row-title-host{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.lodging-title{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.lodging-location{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.w-host{
+    display: flex;
+    gap: 15px;
+}
+
+.host-name{
+    width : min-content;
+    text-align: right
+}
+
+.host-name{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.host-picture{
+    width: 64px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.row-tags-rating{
+    display: flex;
+}
+
+.w-tags{
+    display: flex;
+    gap: 10px;
+}
+
+.tags{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    width: 115px;
+    height: 25px;
+    border-radius: 10%;
+}

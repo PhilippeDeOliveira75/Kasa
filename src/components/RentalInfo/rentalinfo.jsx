@@ -1,21 +1,26 @@
 import './rentalinfo.css';
 import '../../index.css';
 
-function RentalInfo(title) {
+function RentalInfo(props) {
+	console.log(props)
 	return (
-        <div className="row-title-host">
-			<div className="w-title">
-				<h1>{ lodging.title }</h1>
-				<p></p>
-			</div>
-			<div className="w-host">
-				<p></p>
-				<img></img>
+		<div className='row-rentalinfo'>
+			<div className="row-title-host">
+				<div className="w-title">
+					<h1 className='lodging-title primary'>{props.title}</h1>
+					<p className='lodging-location primary'>{props.location}</p>
+				</div>
+				<div className="w-host">
+					<div className='w-host-name'>
+						<p className='host-name primary'>{props.hostname}</p>
+					</div>
+					<img className='host-picture' src={props.hostpicture} alt={`Photo de ${props.hostname}`}></img>
+				</div>
 			</div>
 
 			<div className="row-tags-rating">
 				<div className="w-tags">
-					<p></p>
+					<li className='tags'>{props.tags}</li>
 				</div>
 				<div className="w-rating">
 					<i></i>
@@ -31,7 +36,7 @@ function RentalInfo(title) {
 				<div className="w-facilities">
 				</div>
 			</div>
-        </div>
+		</div>
 	);
 }
 

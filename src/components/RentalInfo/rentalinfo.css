@@ -51,11 +51,23 @@
     gap: 10px;
 }
 
+.tagsList{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 .tags{
     font-family: 'Montserrat';
     font-weight: 500;
-    font-size: 14px;
-    width: 115px;
-    height: 25px;
-    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 0px 15px;
+    border-radius: 10px;
+    min-width: 115px;
+    height: 30px;
+    color: #F6F6F6;
 }

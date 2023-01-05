@@ -1,8 +1,22 @@
 import './rentalinfo.css';
 import '../../index.css';
+import RateStar from '../RateStar/ratestar';
+import Collapse from '../Collapse/collapse';
+
 
 function RentalInfo(props) {
 	console.log(props)
+
+	const tags = props.tags;
+  	const tagsList = tags.map((tag) => 
+		<li className='tags primary-background'>{tag}</li>
+	);
+
+	const equipments = props.equipments;
+	const equipmentsList = equipments.map((equipment) => 
+		<li className=''>{equipment}</li>
+	);
+
 	return (
 		<div className='row-rentalinfo'>
 			<div className="row-title-host">
@@ -20,20 +34,26 @@ function RentalInfo(props) {
 
 			<div className="row-tags-rating">
 				<div className="w-tags">
-					<li className='tags'>{props.tags}</li>
+					<ul className='tagsList'>{tagsList}</ul>
 				</div>
 				<div className="w-rating">
-					<i></i>
-					<i></i>
-					<i></i>
-					<i></i>
-					<i></i>
+					<RateStar />
 				</div>
 			</div>
 			<div className="row-description-facilities">
 				<div className="w-description">
+					<Collapse 
+						title="Description"
+						texte={props.description}
+					/>
 				</div>
 				<div className="w-facilities">
+					<Collapse 
+						title="Equipements"
+						texte={
+							<ul className=''>{equipmentsList}</ul>
+						}
+					/>
 				</div>
 			</div>
 		</div>

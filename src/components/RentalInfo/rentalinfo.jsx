@@ -5,7 +5,6 @@ import Collapse from '../Collapse/collapse';
 
 
 function RentalInfo(props) {
-	console.log(props)
 
 	const tags = props.tags;
   	const tagsList = tags.map((tag) => 
@@ -37,7 +36,8 @@ function RentalInfo(props) {
 					<ul className='tagsList'>{tagsList}</ul>
 				</div>
 				<div className="w-rating">
-					<RateStar />
+					<RateStar 
+						rating={props.rating}/>
 				</div>
 			</div>
 			<div className="row-description-facilities">
@@ -50,9 +50,7 @@ function RentalInfo(props) {
 				<div className="w-facilities">
 					<Collapse 
 						title="Equipements"
-						texte={
-							<ul className=''>{equipmentsList}</ul>
-						}
+						texte={equipmentsList}
 					/>
 				</div>
 			</div>

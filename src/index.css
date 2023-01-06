@@ -43,3 +43,7 @@ body {
     border-radius : 30px;
     filter: brightness(70%);
 }
+
+.row-collapse{
+    margin: 50px 220px;
+}

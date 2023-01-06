@@ -32,9 +32,7 @@ function Lodging() {
 		})
 	}, []);
 
-	console.log(lodging);
 	if(lodging) {
-		console.log(lodging.title);
 	}
 
 	return (
@@ -51,6 +49,9 @@ function Lodging() {
 						hostname={lodging.host.name}
 						hostpicture={lodging.host.picture}
 						tags={lodging.tags}
+						description={lodging.description}
+						equipments={lodging.equipments}
+						rating={lodging.rating}
 					/>
 				</div>
 			)}

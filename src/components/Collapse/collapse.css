@@ -1,8 +1,4 @@
-.collapseDivBox{
-    margin: 50px 220px;
-}
-
-.collapseDivTitle{
+.w-collapseTitle{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +7,7 @@
     height: 50px;
 }
 
-.collapseDivTitle:hover{
+.w-collapseTitle:hover{
     cursor: pointer;
 }
 
@@ -21,21 +17,18 @@
     font-size: 34px;
 }
 
-.content-parent {
+.w-paragraph {
     border-radius: 0px 0px 5px 5px;
     height: 0px;
     width: 100%;
     overflow: hidden;
     transition: height ease 0.5s;
+    margin-bottom: 30px;
 }
 
 .toggleParagraph{
     margin: 30px 20px 20px 20px;
     font-size: 24px;
     font-family: Montserrat;
-}
-
-.content {
-    padding: 0.5rem;
-    border-radius: 5px;
+    line-height: 30px;
 }

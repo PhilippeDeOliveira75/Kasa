@@ -6,6 +6,13 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 80px;
+}
+
+.w-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .lodging-title{
@@ -38,17 +45,19 @@
 
 .host-picture{
     width: 64px;
+    height: 64px;
     border-radius: 100%;
     object-fit: cover;
 }
 
 .row-tags-rating{
+    margin: 15px 0px;
     display: flex;
+    justify-content: space-between;
 }
 
 .w-tags{
     display: flex;
-    gap: 10px;
 }
 
 .tagsList{
@@ -68,6 +77,24 @@
     padding: 0px 15px;
     border-radius: 10px;
     min-width: 115px;
-    height: 30px;
     color: #F6F6F6;
+}
+
+.row-description-facilities{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 96px;
+}
+
+.w-description{
+    flex: 1;
+    width: 582px;
+}
+
+.w-facilities{
+    list-style-type: none;
+    padding: 0;
+    flex: 1;
+    width: 582px;
 }

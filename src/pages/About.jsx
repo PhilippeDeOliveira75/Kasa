@@ -36,7 +36,7 @@ function About() {
             	<img src={imageDesktop} alt='Paysage_montagneux' className='img-about-banner' />
         	</div>
 
-			<div className='aboutCollapse'>
+			<div className='row-collapse'>
                 {aboutInfos.map((infos, index) => (
                     <Collapse
                         key={`${infos.title}-${index}`}

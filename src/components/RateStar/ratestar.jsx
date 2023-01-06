@@ -7,11 +7,18 @@ import '../../index.css';
 
 function RateStar(props) {
 
+    const rating = props.rating
+    const range = [1, 2, 3, 4, 5]
+    
 	return (
         <div className='rateStar'>
-            <img src={plainStar} alt='plain rate star'/>
-            <img src={emptyStar} alt='empty rate star'/>
-    </div>  
+            {range.map((rangeElem) =>
+                rating >= rangeElem ? 
+                <img key={rangeElem.toString()} src={plainStar} alt='Rate star'/> : 
+                <img key={rangeElem.toString()} src={emptyStar} alt='Rate star'/>
+                
+            )}
+        </div>  
 	);
 }
 

@@ -2,17 +2,24 @@
     margin: 30px 100px;
 }
 
-.row-title-host{
+.w-title-tags-host-rating{
+    display: flex;
+    padding: 20px 0px;
+}
+
+.row-title-tags{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 80px;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .w-title{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 5px;
 }
 
 .lodging-title{
@@ -27,8 +34,42 @@
     font-size: 18px;
 }
 
+.w-tags{
+    display: flex;
+}
+
+.tagsList{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tags{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 10px;
+    min-width: 115px;
+    color: #F6F6F6;
+}
+
+.row-host-rating{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .w-host{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 15px;
 }
 
@@ -50,34 +91,8 @@
     object-fit: cover;
 }
 
-.row-tags-rating{
-    margin: 15px 0px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.w-tags{
-    display: flex;
-}
-
-.tagsList{
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.tags{
-    font-family: 'Montserrat';
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-    padding: 0px 15px;
-    border-radius: 10px;
-    min-width: 115px;
-    color: #F6F6F6;
+.w-rating{
+    gap: 10px;
 }
 
 .row-description-facilities{
@@ -89,12 +104,53 @@
 
 .w-description{
     flex: 1;
-    width: 582px;
 }
 
 .w-facilities{
     list-style-type: none;
     padding: 0;
     flex: 1;
-    width: 582px;
+}
+
+@media(width < 768px){
+
+    .row-rentalinfo{
+        margin: 20px 20px;
+    }
+
+    .w-title-tags-host-rating{
+        flex-direction: column;
+    }
+    
+    .lodging-title{
+        font-size: 18px;
+    }
+
+    .lodging-location{
+        font-size: 14px;
+    }
+
+    .tags{
+        font-size: 10px;
+    }
+
+    .row-host-rating{
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .host-name{
+        font-size: 12px;
+    }
+
+    .host-picture{
+        width: 32px;
+        height: 32px;
+    }
+    .row-description-facilities{
+        flex-direction: column;
+        gap: 0px;
+    }
+
 }

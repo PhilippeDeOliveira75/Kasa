@@ -53,3 +53,14 @@
     color: #F6F6F6;
     text-decoration-line: none;
 }
+
+@media(width < 768px){
+
+    .row-cards{
+        margin : 20px 20px;
+    }
+
+    .w-cards{
+        padding: 0px;
+    }
+}

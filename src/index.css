@@ -2,7 +2,7 @@
 
 * {
     padding: 0;
-    margin: 0;
+    margin: 0px;
     box-sizing: border-box;
 }
 
@@ -46,4 +46,24 @@ body {
 
 .row-collapse{
     margin: 50px 220px;
+}
+
+@media(width < 768px){
+
+    .row-cards{
+        margin : 20px 20px;
+    }
+
+    .row-collapse{
+        margin: 20px 20px;
+    }
+
+    .row-home-banner{
+        margin : 20px 20px;
+    }
+
+    .img-about-banner{
+        height: 223px;
+        object-fit: cover;
+    }
 }

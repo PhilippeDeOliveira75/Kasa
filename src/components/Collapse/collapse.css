@@ -13,8 +13,9 @@
 
 .collapseTitle{
     color: white;
-    font-family: Montserrat;
-    font-size: 34px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 24px;
 }
 
 .w-paragraph {
@@ -29,6 +30,7 @@
 .toggleParagraph{
     margin: 30px 20px 20px 20px;
     font-size: 24px;
-    font-family: Montserrat;
+    font-family: 'Montserrat';
+    font-weight: 400;
     line-height: 30px;
 }

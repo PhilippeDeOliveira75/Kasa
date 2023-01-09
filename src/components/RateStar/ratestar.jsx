@@ -18,7 +18,7 @@ function RateStar(props) {
                 <img key={rangeElem.toString()} src={emptyStar} alt='Rate star'/>
                 
             )}
-        </div>  
+        </div>
 	);
 }
 

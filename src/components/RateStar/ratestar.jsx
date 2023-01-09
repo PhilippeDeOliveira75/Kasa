@@ -7,8 +7,8 @@ import '../../index.css';
 
 function RateStar(props) {
 
-    const rating = props.rating
-    const range = [1, 2, 3, 4, 5]
+    const rating = props.rating;
+    const range = [1, 2, 3, 4, 5];
     
 	return (
         <div className='rateStar'>

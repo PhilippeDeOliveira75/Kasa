@@ -63,4 +63,8 @@
     .w-cards{
         padding: 0px;
     }
+
+    .card{
+        width: 100%;
+    }
 }

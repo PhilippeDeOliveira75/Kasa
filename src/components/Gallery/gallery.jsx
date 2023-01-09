@@ -34,8 +34,12 @@ function Gallery(props) {
             <div className='w-carousel'>
                 <img className='carouselImg' src={pictures[index]}/>
                 <div className='carouselChange'>
-                    <p className='previous' onClick={chevronPrevious}> <img src={chevronLeft} alt="Chevron left" /> </p>
-                    <p className='next' onClick={chevronNext}> <img src={chevronRight} alt="Chevron right" /> </p> 
+                    <div className='previous' onClick={chevronPrevious}> 
+                        <img className='imgChevron' src={chevronLeft} alt="Chevron left" /> 
+                    </div>
+                    <div className='next' onClick={chevronNext}>
+                        <img className='imgChevron' src={chevronRight} alt="Chevron right" />
+                    </div> 
                 </div>
             </div>
             <div className='number' style={{display : styleDisplay}}>

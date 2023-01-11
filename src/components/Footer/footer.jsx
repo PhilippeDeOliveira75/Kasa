@@ -1,5 +1,5 @@
 import logo from '../../assets/logo-footer.webp';
-import './footer.css';
+import './Footer.css';
 import '../../index.css';
 
 

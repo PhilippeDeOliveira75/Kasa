@@ -1,7 +1,7 @@
 import React from 'react';
 import emptyStar from '../../assets/empty_star.webp';
 import plainStar from '../../assets/plain_star.webp';
-import './ratestar.css';
+import './Ratestar.css';
 import '../../index.css';
 
 
@@ -14,8 +14,8 @@ function RateStar(props) {
         <div className='rateStar'>
             {range.map((rangeElem) =>
                 rating >= rangeElem ? 
-                <img key={rangeElem.toString()} src={plainStar} alt='Rate star'/> : 
-                <img key={rangeElem.toString()} src={emptyStar} alt='Rate star'/>
+                <img key={rangeElem} src={plainStar} alt='Rate star'/> : 
+                <img key={rangeElem} src={emptyStar} alt='Rate star'/>
                 
             )}
         </div>

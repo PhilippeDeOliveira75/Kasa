@@ -1,4 +1,4 @@
-import './collapse.css';
+import './Collapse.css';
 import React, { useRef, useState } from 'react';
 import chevronDown from '../../assets/ChevronDown.webp';
 import chevronUp from '../../assets/ChevronUp.webp';

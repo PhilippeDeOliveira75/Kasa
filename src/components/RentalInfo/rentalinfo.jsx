@@ -1,19 +1,19 @@
-import './rentalinfo.css';
+import './Rentalinfo.css';
 import '../../index.css';
-import RateStar from '../RateStar/ratestar';
-import Collapse from '../Collapse/collapse';
+import RateStar from '../RateStar/Ratestar';
+import Collapse from '../Collapse/Collapse';
 
 
 function RentalInfo(props) {
 
 	const tags = props.tags;
-  	const tagsList = tags.map((tag) => 
-		<li className='tags primary-background'>{tag}</li>
+  	const tagsList = tags.map((tag, i) => 
+		<li key={i} className='tags primary-background'>{tag}</li>
 	);
 
 	const equipments = props.equipments;
-	const equipmentsList = equipments.map((equipment) => 
-		<li className=''>{equipment}</li>
+	const equipmentsList = equipments.map((equipment, i) => 
+		<li key={i} className=''>{equipment}</li>
 	);
 
 	return (

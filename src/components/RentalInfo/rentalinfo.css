@@ -153,4 +153,11 @@
         gap: 0px;
     }
 
+    .collapseTitle{
+        font-size: 18px;
+    }
+
+    .toggleParagraph{
+        font-size: 18px;
+    }
 }

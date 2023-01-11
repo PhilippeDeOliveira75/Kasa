@@ -1,6 +1,6 @@
 import image from '../../assets/home_banner.webp';
 import '../../index.css';
-import './banner.css';
+import './Banner.css';
 
 
 function Banner() {

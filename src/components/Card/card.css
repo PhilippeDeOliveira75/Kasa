@@ -16,13 +16,14 @@
 }
 
 .card{
+    overflow: hidden;
+    position: relative;
     text-decoration: none;
     background-color: rgb(255, 96, 96);
     display: flex;
     flex-direction: column;
-    height: 335px;
-    width: 335px;
-    padding : 10px 10px 10px 10px;
+    height: 340px;
+    width: 340px;
     border-radius : 10px;
     z-index: 1;
     transition: 0.5s all ease-in-out;
@@ -34,16 +35,21 @@
 }
 
 .card-img{
-    height : 250px;
+    position: absolute;
+    height : 340px;
     width : 100%;
     border-radius : 10px;
     object-fit : cover;
 }
 .w-card-title{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    position: absolute;
     display: flex;
+    align-items: flex-end;
+    width: 100%;
     height: 100%;
-    align-items: center;
     line-height: 25px;
+    padding: 20px 20px;
 }
 
 .card-title{
@@ -66,5 +72,7 @@
 
     .card{
         width: 100%;
+        height: 255px;
+        width: 335px;
     }
 }

@@ -1,4 +1,4 @@
-import './card.css';
+import './Card.css';
 import '../../index.css';
 import { NavLink } from "react-router-dom";
 

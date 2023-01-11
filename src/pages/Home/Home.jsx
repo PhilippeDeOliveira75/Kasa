@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
-import Header from '../components/Header/header';
-import Banner from '../components/Banner/banner';
-import Card from '../components/Card/card';
-import Footer from '../components/Footer/footer';
-import '../index.css';
-import '../components/Card/card.css';
+import Header from '../../components/Header/Header';
+import Banner from '../../components/Banner/Banner';
+import Card from '../../components/Card/Card';
+import Footer from '../../components/Footer/Footer';
+import '../../index.css';
+import '../../components/Card/Card.css';
+import './Home.css';
 
 
 function Home() {
@@ -33,8 +34,9 @@ function Home() {
 			<Banner />
 			<div className='row-cards secondary-background'>
             	<div className='w-cards'>
-				{ lodgings && lodgings.length > 0 && lodgings.map((item) =>
+				{ lodgings && lodgings.length > 0 && lodgings.map((item, i) =>
 				<Card
+					key={i}
 					id={item.id}
 					title={item.title}
 					cover={item.cover}

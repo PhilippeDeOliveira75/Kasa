@@ -1,4 +1,4 @@
-import './gallery.css';
+import './Gallery.css';
 import React, { useEffect, useState } from 'react';
 import chevronRight from '../../assets/ChevronRight.webp';
 import chevronLeft from '../../assets/ChevronLeft.webp';
@@ -32,7 +32,9 @@ function Gallery(props) {
     return (
         <div className="row-carousel" >
             <div className='w-carousel'>
-                <img className='carouselImg' src={pictures[index]}/>
+				{pictures && pictures.length > 0 && pictures.map((picture, i) =>
+				    <img key={i} className={(i === index) ? `carouselImg carouselImg-${i} active` : `carouselImg carouselImg-${i}`} src={picture} alt="" />
+				)}
                 <div className='carouselChange'>
                     <div className='previous' onClick={chevronPrevious}> 
                         <img className='imgChevron' src={chevronLeft} alt="Chevron left" /> 

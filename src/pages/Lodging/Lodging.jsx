@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom";
-import Header from '../components/Header/header';
-import Gallery from '../components/Gallery/gallery';
-import RentalInfo from '../components/RentalInfo/rentalinfo';
-import Footer from '../components/Footer/footer';
-import '../index.css';
+import Header from '../../components/Header/Header';
+import Gallery from '../../components/Gallery/Gallery';
+import RentalInfo from '../../components/RentalInfo/Rentalinfo';
+import Footer from '../../components/Footer/Footer';
+import '../../index.css';
+import './Lodging.css';
 
 function Lodging() {
 

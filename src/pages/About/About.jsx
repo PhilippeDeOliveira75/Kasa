@@ -1,18 +1,18 @@
-import Header from '../components/Header/header';
-import Footer from '../components/Footer/footer';
-import imageDesktop from '../assets/AboutDesktopBanner.webp';
-import imageMobile from '../assets/AboutMobileBanner.webp';
-import '../index.css';
-
-import Collapse from '../components/Collapse/collapse';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import imageDesktop from '../../assets/AboutDesktopBanner.webp';
+import imageMobile from '../../assets/AboutMobileBanner.webp';
+import '../../index.css';
+import './About.css';
+import Collapse from '../../components/Collapse/Collapse';
 import React, { useState, useEffect } from "react";
 
 
 function About() {
 
-  const [aboutInfos, setAboutInfos] = useState([])
+  	const [aboutInfos, setAboutInfos] = useState([])
 
-  useEffect(() => {
+  	useEffect(() => {
 		fetch("http://localhost:3000/about.json")
 		.then(function(res){
 			if(res.ok){
@@ -28,21 +28,14 @@ function About() {
 		})
 	}, []);
 
-	const widthScreen = window.innerWidth;
 	
-    let imgBanner;
-  
-    if(widthScreen > 767){
-      imgBanner = imageDesktop;
-    } else {
-      imgBanner = imageMobile;
-    }
 
 	return (
 		<div>
 			<Header />
-			<div className='row-home-banner'>
-            	<img src={imageBanner} alt='Paysage_montagneux' className='img-about-banner' />
+			<div className='row-about-banner'>
+				<div className='img-about-banner'>
+				</div>
         	</div>
 
 			<div className='row-collapse'>

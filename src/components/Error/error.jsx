@@ -1,4 +1,4 @@
-import './error.css';
+import './Error.css';
 import '../../index.css';
 import { NavLink } from "react-router-dom";
 

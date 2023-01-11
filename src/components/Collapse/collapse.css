@@ -34,3 +34,14 @@
     font-weight: 400;
     line-height: 30px;
 }
+
+@media(width < 768px){
+
+    .collapseTitle{
+        font-size: 13px;
+    }
+
+    .toggleParagraph{
+        font-size: 12px;
+    }
+}

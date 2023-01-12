@@ -1,5 +1,5 @@
 import './Gallery.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import chevronRight from '../../assets/ChevronRight.webp';
 import chevronLeft from '../../assets/ChevronLeft.webp';
 import '../../index.css';

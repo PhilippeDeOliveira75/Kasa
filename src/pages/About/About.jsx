@@ -1,7 +1,5 @@
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import imageDesktop from '../../assets/AboutDesktopBanner.webp';
-import imageMobile from '../../assets/AboutMobileBanner.webp';
 import '../../index.css';
 import './About.css';
 import Collapse from '../../components/Collapse/Collapse';

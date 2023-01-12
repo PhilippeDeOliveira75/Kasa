@@ -12,11 +12,10 @@ function RateStar(props) {
     
 	return (
         <div className='rateStar'>
-            {range.map((rangeElem) =>
-                rating >= rangeElem ? 
-                <img key={rangeElem} src={plainStar} alt='Rate star'/> : 
-                <img key={rangeElem} src={emptyStar} alt='Rate star'/>
-                
+            {range.map((value) =>
+                rating >= value ? 
+                <img key={value} src={plainStar} alt='Rate star'/> : 
+                <img key={value} src={emptyStar} alt='Rate star'/> 
             )}
         </div>
 	);

@@ -33,9 +33,6 @@ function Lodging() {
 		})
 	}, []);
 
-	if(lodging) {
-	}
-
 	return (
 		<div>
 			<Header />

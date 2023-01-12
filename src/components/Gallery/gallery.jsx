@@ -11,7 +11,6 @@ function Gallery(props) {
     const [index, setindex] = useState(0)
     const pictures = props.pictures;
     const pictureList = pictures.length;
-    let styleDisplay;
     
     function chevronNext(){
         if(index === pictureList -1 ){
@@ -44,7 +43,7 @@ function Gallery(props) {
                     </div> 
                 </div>
             </div>
-            <div className='number' style={{display : styleDisplay}}>
+            <div className='number'>
                 {index+1 + " / " + pictureList}
             </div>
          </div>

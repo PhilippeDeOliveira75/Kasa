@@ -34,6 +34,9 @@ function Gallery(props) {
 				{pictures && pictures.length > 0 && pictures.map((picture, i) =>
 				    <img key={i} className={(i === index) ? `carouselImg carouselImg-${i} active` : `carouselImg carouselImg-${i}`} src={picture} alt="" />
 				)}
+
+                {pictures.length > 1 ? (
+                    <>
                 <div className='carouselChange'>
                     <div className='previous' onClick={chevronPrevious}> 
                         <img className='imgChevron' src={chevronLeft} alt="Chevron left" /> 
@@ -42,6 +45,8 @@ function Gallery(props) {
                         <img className='imgChevron' src={chevronRight} alt="Chevron right" />
                     </div> 
                 </div>
+                </>
+                ) : null}
             </div>
             <div className='number'>
                 {index+1 + " / " + pictureList}

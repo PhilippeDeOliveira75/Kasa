@@ -2,10 +2,8 @@ import './Header.css';
 import { NavLink } from "react-router-dom";
 import logo from '../../assets/Logo.webp';
 import '../../index.css';
-import { useState } from 'react';
 
 function Header() {
-	let [active,setActive] = useState(window.location.pathname);
 
 	return (
 		<header>
@@ -16,10 +14,10 @@ function Header() {
 				<nav>
 					<ul className='w-nav'>
 						<li>
-							<NavLink to="/" className={active==="/"?"active nav-btn primary":"nav-btn primary"}>Accueil</NavLink>
+							<NavLink to="/" className="nav-btn primary">Accueil</NavLink>
 						</li>
 						<li>
-							<NavLink to="/about" className={active==="/about"?"active nav-btn primary":"nav-btn primary"}>À Propos</NavLink>
+							<NavLink to="/about" className="nav-btn primary">À Propos</NavLink>
 						</li>
 					</ul>
 				</nav>
